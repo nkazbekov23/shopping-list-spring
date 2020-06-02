@@ -15,6 +15,9 @@ public class ShoppingItem {
 
     public ShoppingItem() {}//конструткор по умолочаниию
 
+    @ManyToOne//множество продуктов будет будет принадлежать одному пользователю
+    private User user;
+
     public int getId() {
         return id;
     }
@@ -29,5 +32,13 @@ public class ShoppingItem {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
